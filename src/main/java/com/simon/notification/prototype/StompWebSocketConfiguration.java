@@ -11,7 +11,7 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 public class StompWebSocketConfiguration extends AbstractWebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry stompEndpointRegistry) {
-        stompEndpointRegistry.addEndpoint("/notification");
+        stompEndpointRegistry.addEndpoint("/notification").setAllowedOrigins("*");
     }
 
     @Override
